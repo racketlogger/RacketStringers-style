@@ -2,4 +2,8 @@
 @include flair-img(discussion);
 @include flair-img(advice);
 
+a.thumbnail {
+  background-image: none;
+}
+
 //TODO: Night mode flairs
