@@ -1,9 +1,5 @@
-@include flair-img(critique, flair-critique);
-@include flair-img(meta, flair-meta);
-@include flair-img(submissions, flair-submissions);
-@include flair-img(resource, flair-resource);
-@include flair-img(other, flair-other);
-@include flair-img(discussion, flair-discussion);
-@include flair-img(advice, flair-advice);
+@include flair-img(resource);
+@include flair-img(discussion);
+@include flair-img(advice);
 
 //TODO: Night mode flairs

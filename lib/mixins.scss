@@ -4,8 +4,8 @@
   border-radius: 0px;
 }
 
-@mixin flair-img($flair, $img) {
-  div.linkflair-#{$flair} div.entry p.title > span.linkflairlabel:before { background:url(%%#{$img}%%); }
+@mixin flair-img($flair) {
+  div.linkflair-#{$flair} div.entry p.title > span.linkflairlabel:before { background:url(%%flair-#{$flair}%%); }
 }
 
 @mixin box-shadow($args) {
