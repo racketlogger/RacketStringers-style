@@ -1,0 +1,38 @@
+// Highlight when hovering over the gear menu
+div#RESMainGearOverlay { background: $contrast-highlight-background; }
+
+// Gear (preferences) menu
+div#RESPrefsDropdown {
+  border: 1px solid $contrast-background;
+
+  ul#RESDropdownOptions li {
+
+    // Strangely, the menu options are not consistent here - while most are a list-item, at least one ("my dashboard")
+    // has a link element nested inside. This code ensures that the following styles are equally applied to all options
+    // regardless of whether there is a nested link or not.
+    &, & a {
+      border: none;
+      background: $contrast-background;
+      color: $contrast-foreground;
+    }
+
+    &:hover, & a:hover {
+      background: $contrast-highlight-background;
+      color: $contrast-highlight-foreground;
+    }
+
+  }
+
+}
+
+// Applies to all active page elements (used for keyboard navigation)
+div.RES-keyNav-activeElement {
+  background: $selected !important;
+  outline: none !important;
+
+}
+
+// Override RES's uh... questionable colorization of individually selected comments
+.RES-keyNav-activeElement,
+.commentarea .RES-keyNav-activeElement .md,
+.commentarea .RES-keyNav-activeElement.entry .noncollapsed { background-color:transparent !important; }

@@ -1,0 +1,107 @@
+div.content {
+  margin: 0;
+  bottom: 0px;
+  margin-top: 0px;
+  padding: 10px 0px 0px 0px !important;
+  background-color: $box-background;
+  border: 1px solid $box-border;
+  @include box-shadow(0px 1px 3px 1px $box-shadow);
+  margin: 40px 340px 0px 10px;
+
+  div.sitetable {
+
+    @import "flair.scss";
+
+    // An individual post: even-numbered
+    div.even {
+      background-color: $post-link-alt-background;
+    }
+
+    // An individual post: odd-numbered
+    div.odd {
+      background-color: $box-background;
+    }
+
+    // An individual post
+    div.link {
+      overflow: hidden;
+      margin: 0px;
+      padding: 5px 5px 10px 5px;
+      border-top: 1px solid darken($post-link-alt-background, 10%);
+      min-height: 50px;
+
+      // Remove top border from first post
+      &:first-child { border-top: none; }
+
+      // Ranking number to the left of entry
+      span.rank { color: $muted-text; }
+
+      div.entry {
+        margin-left: 110px;
+
+        // Link flair
+        span.linkflairlabel {
+          background-color: $flair-background;
+          color: $flair-foreground;
+          border: none;
+          width: 80px;
+          text-align: center;
+          height: 14px;
+          vertical-align:bottom;
+          @include no-rounded-corners;
+        }
+
+        // Adds an element (in this case, the flair icons) before the link flair
+        span.linkflairlabel:before {
+          content: '';
+          display: block;
+          height: 50px;
+          width: 50px;
+          padding:0;
+          margin: -5px 75px;
+          position:absolute;
+          left: -2px;
+        }
+
+        // First line of an entry: title + domain
+        p.title {
+
+          // Link title
+          a.title {
+            color: $post-link;
+
+            // Visited link
+            &:visited { color: $post-link-visited; }
+
+          }
+
+          // Domain name
+          span.domain a { color: $link; }
+
+        }
+
+        // Tagline under post, i.e. "submitted x hours ago by user"
+        p.tagline {
+          color: $muted-text;
+
+          // Link to userpage
+          a { color: $link; }
+
+        }
+
+        // Actions underneath post, e.g. comment, share, save
+        .buttons li a { color: $muted-text; }
+
+        // The post itself (self-post)
+        div.expando div.usertext-body div.md {
+          border-color: $content-border;
+          @include no-rounded-corners;
+        }
+
+      }
+
+    }
+
+  }
+
+}

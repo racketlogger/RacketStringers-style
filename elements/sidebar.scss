@@ -1,0 +1,85 @@
+div.side {
+
+  width: 300px;
+  margin: 40px 10px 40px auto;
+  padding: 10px !important;
+  z-index: 0;
+  border: 1px solid $box-border;
+  @include box-shadow(0px 1px 3px 1px $box-shadow);
+  overflow: hidden;
+
+  // The search box
+  form#search {
+
+    // Advanced search options that appear when clicking on the search box
+    div#searchexpando {
+      background-color: $content-background;
+      color: $content-foreground;
+      border: 1px solid $content-border;
+      @include no-rounded-corners;
+    }
+
+  }
+
+  // Box with update/downvote counts displayed on the comments of a post
+  div.linkinfo {
+    background: $content-background;
+    border: 1px solid $content-border;
+    @include no-rounded-corners;
+
+    // Shortlink box
+    div.shortlink input#shortlink-text { border: 1px solid $content-border; }
+
+  }
+
+  div.sidebox {
+
+    .morelink {
+      border: 1px solid $content-border !important;
+      background: $content-background;
+      border:0px;
+
+      a {
+        color: $text !important;
+      }
+
+      div.nub { display: none; }
+
+    }
+
+  }
+
+  div.titlebox {
+    span.word {
+      display: none
+    }
+    span.number:after {
+      content: " writers"
+    }
+  }
+
+  div.usertext-body {
+
+    div.md {
+
+      h3:nth-of-type(1) {
+        position: absolute;
+        top:($header-height + 25);
+        left: 0;
+        display: block;
+        border-bottom: 1px solid $box-border;
+        @include box-shadow(0px 1px 3px 1px $box-shadow);
+        background: $box-background;
+        text-align: left;
+        font-size: 15px;
+        color: $text;
+        font-weight: bold;
+        padding: 7px 7px 7px 27px;
+        left: 0px;
+        right: 0px;
+      }
+
+    }
+
+  }
+}

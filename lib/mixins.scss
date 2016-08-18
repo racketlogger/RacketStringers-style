@@ -1,0 +1,15 @@
+@mixin no-rounded-corners {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+@mixin flair-img($flair, $img) {
+  div.linkflair-#{$flair} div.entry p.title > span.linkflairlabel:before { background:url(%%#{$img}%%); }
+}
+
+@mixin box-shadow($args) {
+  -moz-box-shadow: $args;
+  -webkit-box-shadow: $args;
+  box-shadow: $args;
+}

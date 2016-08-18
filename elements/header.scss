@@ -1,0 +1,77 @@
+div#header {
+  border-bottom-color: $header-foreground;
+
+  // Subreddit shortcut bar
+  #sr-header-area {
+    opacity: .6;
+    background-color: $box-background;
+  }
+
+  div#header-bottom-left {
+    background-image: url(%%header-background%%);
+    background-position: left center;
+    background-color: $header-background;
+
+    height: $header-height;
+
+    #header-img {
+      margin-top: $header-height - 43;
+    }
+
+    #header-img-a #header-img {
+      margin-bottom: -3px; // Make alien's podium flush with top of subreddit
+      margin-left: 10px;
+    }
+
+    @if $night {
+      background-image: url(%%header-background-night%%) !important;
+      background-position: left center !important;
+      background-color: $header-background !important;
+    }
+
+    // Tabs
+    ul.tabmenu li {
+
+      // All tabs
+      a {
+        font-weight: normal;
+        background: $contrast-background;
+        color: $contrast-foreground;
+      }
+
+      // Selected tab
+      &.selected a {
+        background: $box-background;
+        color: $link;
+        border: 1px solid $header-foreground;
+        border-bottom-color: $box-background;
+      }
+
+    }
+
+  }
+
+  // Userbar: positioned upper-right in RES, lower-right in vanilla Reddit
+  div#header-bottom-right {
+    background: $contrast-background;
+    color: $contrast-foreground;
+
+    // RES: Show/hide userbar button
+    div#userbarToggle {
+      background: $contrast-background;
+      border-right-color: $contrast-background;
+      color: $contrast-foreground;
+    }
+
+    // Links
+    a { color: $contrast-foreground; }
+
+    // User information: username, karma
+    span.user { color: $contrast-foreground; }
+
+    // Pipe separator between elements
+    span.separator { color: $contrast-foreground; }
+
+  }
+
+}
